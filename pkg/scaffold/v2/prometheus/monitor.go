@@ -5,7 +5,7 @@ import (
 	"sigs.k8s.io/kubebuilder/pkg/scaffold/input"
 )
 
-// PrometheusMetricsService scaffolds an issuer CR and a certificate CR
+// PrometheusServiceMonitor scaffolds an issuer CR and a certificate CR
 type PrometheusServiceMonitor struct {
 	input.Input
 }

@@ -41,7 +41,7 @@ objects, so these are added out of the box.
 // CronJobReconciler reconciles a CronJob object
 type CronJobReconciler struct {
 	client.Client
-	Log logr.Logger
+	Log    logr.Logger
 	Scheme *runtime.Scheme
 }
 
@@ -56,7 +56,7 @@ needed to run.  As we add more functionality, we'll need to revisit these.
 // +kubebuilder:rbac:groups=batch.tutorial.kubebuilder.io,resources=cronjobs/status,verbs=get;update;patch
 
 /*
-`Reconcile` actually performs the reconciling for a single named object.
+Reconcile actually performs the reconciling for a single named object.
 Our [Request](https://godoc.org/sigs.k8s.io/controller-runtime/pkg/reconcile#Request) just has a name, but we can use the client to fetch
 that object from the cache.
 

@@ -34,10 +34,10 @@ import (
 
 // +kubebuilder:docs-gen:collapse=Imports
 
+// CronJobSpec defines the desired state of CronJob
 /*
 We'll leave our spec largely unchanged, except to change the schedule field to a new type.
 */
-// CronJobSpec defines the desired state of CronJob
 type CronJobSpec struct {
 	// The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
 	Schedule CronSchedule `json:"schedule"`
@@ -91,7 +91,7 @@ Based on our proposed YAML above, it'll have a field for
 each corresponding Cron "field".
 */
 
-// describes a Cron schedule.
+// CronSchedule describes a Cron schedule.
 type CronSchedule struct {
 	// specifies the minute during which the job executes.
 	// +optional
@@ -116,7 +116,7 @@ We could attach additional validation to this field,
 but for now we'll just use it for documentation purposes.
 */
 
-// represents a Cron field specifier.
+// CronField represents a Cron field specifier.
 type CronField string
 
 /*

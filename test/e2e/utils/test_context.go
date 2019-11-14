@@ -158,7 +158,7 @@ func (kc *KBTestContext) Make(makeOptions ...string) error {
 	return err
 }
 
-// CleanupImage is for cleaning up the docker images for testing
+// Destroy is for cleaning up the docker images for testing
 func (kc *KBTestContext) Destroy() {
 	cmd := exec.Command("docker", "rmi", "-f", kc.ImageName)
 	if _, err := kc.Run(cmd); err != nil {

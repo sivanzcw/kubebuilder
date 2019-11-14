@@ -22,7 +22,7 @@ import (
 	"sigs.k8s.io/kubebuilder/pkg/scaffold/input"
 )
 
-// CRDWebhookPatch scaffolds a CRDWebhookPatch for a Resource
+// ManagerWebhookPatch scaffolds a CRDWebhookPatch for a Resource
 type ManagerWebhookPatch struct {
 	input.Input
 }

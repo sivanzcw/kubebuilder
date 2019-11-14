@@ -31,7 +31,7 @@ import (
 	"github.com/gobuffalo/flect"
 )
 
-// writeIfNotFound returns true if the file was created and false if it already exists
+// WriteIfNotFound returns true if the file was created and false if it already exists
 func WriteIfNotFound(path, templateName, templateValue string, data interface{}) bool {
 	// Make sure the directory exists
 	os.MkdirAll(filepath.Dir(path), 0700)
